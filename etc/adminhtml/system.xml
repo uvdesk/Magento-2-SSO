@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Sso
+ * @author    Webkul Software Private Limited
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="webkul" translate="label" sortOrder="10">
+            <label>Webkul</label>
+        </tab>
+        <section id="sso_conn" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SsoConnector</label>
+            <tab>webkul</tab>
+            <resource>Webkul_Sso::config</resource>
+            <group id="sso_config" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>SSO Configuration</label>
+                <field id="sso_secret_key" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Key</label>
+                    <comment><![CDATA[(eg. asdaqdeasccQDDAsfds34edf)]]></comment>               
+                </field>
+                <field id="sso_redirect_url" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URL</label>
+                    <comment><![CDATA[(eg. http://webkul.com)]]></comment>               
+                </field>                                                                           
+            </group>
+        </section>
+    </system>
+</config>

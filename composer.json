@@ -1,0 +1,25 @@
+{
+    "name": "webkul/sso",
+    "description": "Magento2 single sign out",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/module-config": "100.1.*",
+        "magento/module-customer": "100.1.*",
+        "magento/module-store": "100.1.*",
+        "magento/module-contact": "100.1.*",
+        "magento/framework": "100.1.*"
+    },
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webkul\\Sso\\": ""
+        }
+    }
+}

@@ -1,0 +1,9 @@
+Legend
+
++ Features
+- Bugs
+
+-------------------------------- Version 2.0.0 --------------------------------------
+	
+	+ Client can login to third party application using client's Magento credentials.
+	+ Admin can register the client from admin panel.

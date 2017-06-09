@@ -1,0 +1,57 @@
+<?php 
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Sso
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<?php 
+$isAuthorized = $block->isAuthorized();
+$isLoggedIn = $block->isLoggedIn();
+?>
+<?php if ($isAuthorized && !$isLoggedIn) { ?>
+<?php //if (!$isLoggedIn) { ?>
+<main id="maincontent" class="page-main __web-inspector-hide-shortcut__"><a id="contentarea" tabindex="-1"></a>
+    <div class="login-container">
+        <div class="block block-customer-login">
+            <div class="block-title">
+                    <strong id="block-customer-login-heading" role="heading" aria-level="2">Registered Customers</strong>
+            </div>
+            <div class="block-content" aria-labelledby="block-customer-login-heading">
+                <form class="form form-login" action="<?php $block->getUrl('sso/sso/index');?>" method="post" id="login-form" novalidate="novalidate">
+                    <input name="form_key" type="hidden" value="HyJIVzEi7lWsP0XO">            <fieldset class="fieldset login" data-hasrequired="* Required Fields">
+                        <div class="field note">If you have an account, sign in with your email address.</div>
+                        <div class="field email required">
+                            <label class="label" for="email"><span>Email</span></label>
+                            <div class="control">
+                                <input name="login[username]" value="" autocomplete="off" id="email" type="email" class="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="field password required">
+                            <label for="pass" class="label"><span>Password</span></label>
+                            <div class="control">
+                                <input name="login[password]" type="password" autocomplete="off" class="input-text" id="pass" title="Password" data-validate="{required:true}" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="actions-toolbar">
+                            <div class="primary"><button type="submit" class="action login primary" name="send" id="send2"><span>Sign In</span></button></div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<?php } ?>
+<?php if ($isLoggedIn) { ?>
+<form action"" method="post" id="login-form">
+    <div style="text-align: center;padding:13px;margin:auto;width:35%">
+        <button name="authorization" value="true" style="width:146px;height: 40px;float:left;">Authorize</button>
+        <button name="cancel" value="true" style="width:146px;height: 40px;float:right;">Cancel</button>
+    </div>
+</form>
+<?php } ?>

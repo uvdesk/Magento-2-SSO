@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Webkul Software.
+*
+* @category Webkul
+* @package Webkul_Sso
+* @author Webkul
+* @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+* @license https://store.webkul.com/license.html
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="standard">
+        <route id="sso" frontName="sso">
+            <module name="Webkul_Sso" />
+        </route>
+    </router>
+</config>

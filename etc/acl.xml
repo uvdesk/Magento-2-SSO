@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Webkul Software.
+*
+* @category Webkul
+* @package Webkul_Sso
+* @author Webkul
+* @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+* @license https://store.webkul.com/license.html
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Webkul_Sso::uvDeskConnector" title="UV desk connector" sortOrder="10" >
+                    <resource id="Webkul_Sso::tickets" title="Tickets" sortOrder="10">
+                    </resource>
+                </resource>
+                <resource id="Webkul_Sso::tickets_index" title="Tickets Grid" sortOrder="90" />    
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Webkul_Sso::config" title="UVdesk" sortOrder="45" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
