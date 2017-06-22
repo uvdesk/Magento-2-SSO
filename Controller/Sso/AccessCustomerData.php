@@ -14,7 +14,6 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use Magento\Framework\App\Response\RedirectInterface;
 use Webkul\Sso\Helper\Firebase\JWT\JWT;
 
 class AccessCustomerData extends Action
@@ -37,7 +36,6 @@ class AccessCustomerData extends Action
      * @param \Magento\Store\Model\StoreManagerInterface          $storeManager
      * @param \Webkul\Sso\Model\SsoFactory                        $uvdeskSso
      * @param \Magento\Framework\Session\SessionManagerInterface  $session
-     * @param RedirectInterface                                   $redirect
      * @param \Webkul\Sso\Model\IntegrationsFactory               $integrationFactory
      */
     public function __construct(
@@ -51,7 +49,6 @@ class AccessCustomerData extends Action
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Webkul\Sso\Model\SsoFactory $uvdeskSso,
         \Magento\Framework\Session\SessionManagerInterface $session,
-        RedirectInterface $redirect,
         \Webkul\Sso\Model\IntegrationsFactory $integrationFactory
     ) 
     {
@@ -62,7 +59,6 @@ class AccessCustomerData extends Action
         $this->_customerAuthentication = $customerAuthentication;
         $this->_customerFactory = $customerFactory;
         $this->_storeManager = $storeManager;
-        $this->_redirect = $redirect;
         $this->_uvdeskSso = $uvdeskSso;
         $this->_session = $session;
         $this->_integrationFactory = $integrationFactory;

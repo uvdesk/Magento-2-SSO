@@ -15,7 +15,6 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use Magento\Framework\App\Response\RedirectInterface;
 use Webkul\Sso\Helper\Firebase\JWT\JWT;
 
 /**
@@ -43,7 +42,6 @@ class Index extends Action
      * @param \Webkul\Sso\Model\SsoFactory                         $uvdeskSso
      * @param \Webkul\Sso\Model\IntegrationsFactory                $integrations
      * @param \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $phpEnv
-     * @param RedirectInterface $redirect
      */
     public function __construct(
         Context $context,
@@ -57,8 +55,7 @@ class Index extends Action
         \Magento\Framework\Session\SessionManagerInterface $session,
         \Webkul\Sso\Model\SsoFactory $uvdeskSso,
         \Webkul\Sso\Model\IntegrationsFactory $integrations,
-        \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $phpEnv,
-        RedirectInterface $redirect
+        \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $phpEnv
     ) 
     {
         $this->_resultPageFactory = $resultPageFactory;
@@ -68,7 +65,6 @@ class Index extends Action
         $this->_customerAuthentication = $customerAuthentication;
         $this->_customerFactory = $customerFactory;
         $this->_storeManager = $storeManager;
-        $this->_redirect = $redirect;
         $this->_session = $session;
         $this->_uvdeskSso = $uvdeskSso;
         $this->_integrations = $integrations;

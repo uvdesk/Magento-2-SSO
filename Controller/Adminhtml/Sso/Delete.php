@@ -28,14 +28,12 @@ class Delete extends \Magento\Backend\App\Action
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
-        \Webkul\Sso\Model\IntegrationsFactory $integrationFactory,
-        \Magento\Framework\Message\ManagerInterface $messageManager
+        \Webkul\Sso\Model\IntegrationsFactory $integrationFactory
     ) 
     {
         parent::__construct($context);
         $this->_resultPageFactory = $resultPageFactory;
         $this->_integrationFactory = $integrationFactory;
-        $this->_messageManager = $messageManager;
     }
 
     public function execute()
@@ -44,9 +42,9 @@ class Delete extends \Magento\Backend\App\Action
         if (isset($post['id'])) {
             try {
                 $this->_integrationFactory->create()->load($post['id'])->delete();
-                $this->_messageManager->addSuccess(__("Deleted Successfully"));
+                $this->messageManager->addSuccess(__("Deleted Successfully"));
             }catch(\Exception $e){
-                $this->_messageManager->addError(__($e->getMessage()));
+                $this->messageManager->addError(__($e->getMessage()));
             }
         }
         $this->_redirect("sso/sso/index");
