@@ -4,8 +4,7 @@
 
 Magento2 Sso single sign out module installation is very easy, please follow the steps for installation-
 
-1. Go to your magento's root directory
-2. Download and extract the Magento2 SSO Module into app -> code -> Webkul -> Sso (create the respective directories if not already present)
+1. Go to your magento's root directory, then download and extract the Magento2 SSO Module into app -> code -> Webkul -> Sso (create the respective directories if not already present)
 
 Run Following Command via terminal
 -----------------------------------
