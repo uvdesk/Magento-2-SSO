@@ -16,10 +16,6 @@ php bin/magento setup:static-content:deploy
 
 now module is properly installed
 
-# User Guide
-
-For Magento2 Eshopsync Saleforce connector module's working process follow user guide - 
-
 # Support
 
 Find us our support policy - https://store.webkul.com/support.html/

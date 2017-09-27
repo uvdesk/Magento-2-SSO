@@ -36,7 +36,7 @@ class Collection extends AbstractCollection implements SearchResultInterface
         \Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
         \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
     ) {
-    
+
         parent::__construct(
             $entityFactory,
             $logger,
@@ -81,18 +81,6 @@ class Collection extends AbstractCollection implements SearchResultInterface
     public function getAggregations()
     {
         return $this->aggregations;
-    }
-    /**
-     * Retrieve all ids for collection
-     * Backward compatibility with EAV collection
-     *
-     * @param int $limit
-     * @param int $offset
-     * @return array
-     */
-    public function getAllIds($limit = null, $offset = null)
-    {
-        return $this->getConnection()->fetchCol($this->_getAllIdsSelect($limit, $offset), $this->_bindParams);
     }
 
     /**

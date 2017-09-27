@@ -12,8 +12,11 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
+    <title>Single Sign On</title>
+    <css src="Webkul_Sso::css/style.css"/>
     </head>
     <body>
+        <referenceBlock name="page.main.title" remove="true" />
         <referenceContainer name="content">
             <block class="Webkul\Sso\Block\Sso" name="sso_login" template="Webkul_Sso::ssoLogin.phtml" cacheable="false">
             </block>

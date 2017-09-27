@@ -49,7 +49,8 @@ class Save extends \Magento\Backend\App\Action
         }
         $model->setName($post['client_details']['name']);
         $model->setUrl($post['client_details']['url']);
-        $model->setEmail($post['client_details']['email']);
+        // $model->setEmail($post['client_details']['email']);
+        $model->setEmail("");
         $model->save(); 
         $this->_redirect("sso/sso/index");
         return $resultPage;

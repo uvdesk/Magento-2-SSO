@@ -59,6 +59,7 @@
                     <item name="dataScope" xsi:type="string">name</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-no-html-tags" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -71,14 +72,14 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">employee</item>
                     <item name="dataScope" xsi:type="string">url</item>
+                    <item name="notice" xsi:type="string" translate="true">customer will be redirected to the above given url after canceling the authorization process</item>
                     <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
                         <item name="validate-url" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
         </field>
-        <field name="email">
+        <!--<field name="email">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
@@ -92,7 +93,7 @@
                     </item>
                 </item>
             </argument>
-        </field>
+        </field>-->
     </fieldset>
     <fieldset name="client_credentials">
         <argument name="data" xsi:type="array">

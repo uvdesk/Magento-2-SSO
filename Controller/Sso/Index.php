@@ -86,14 +86,15 @@ class Index extends Action
         $isLoggedIn = $this->_dataHelper->isLoggedIn();
         if (isset($post['client_id'])&& !isset($post['login']) && !isset($post['authorization'])) {
             if (!$isAuthorized ){
+                // $resultPage->getConfig()->getTitle()->set(__('Sign In to continue to UVdesk.com'));
                 $this->messageManager->addError(__('Unauthorized client'));
                 // $resultRedirect = $this->resultFactory->create($this->_redirect->getRedirectUrl());
                 // $resultRedirect->setPath('sso/sso/index',['_current' => true]);
                 // return $resultRedirect;
             }
-            if($isAuthorized){
-                $this->messageManager->addSuccess(__('Authorized client'));
-            }
+            // if($isAuthorized){
+                // $this->messageManager->addSuccess(__('Authorized client'));
+            // }
         }
         // if ($isLoggedIn && $isAuthorized) {
         //     $this->messageManager->addSuccess(__('Authorized token'));

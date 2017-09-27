@@ -9,7 +9,7 @@
         </item>
         <item name="spinner" xsi:type="string">sso_sso_columns</item>
         <!--Declare the listing of columns which will be defined below-->
-         <item name="buttons" xsi:type="array"> 
+         <item name="buttons" xsi:type="array">
             <item name="update" xsi:type="array">
                 <item name="name" xsi:type="string">update</item>
                 <item name="label" xsi:type="string" translate="true">Add New Integration</item>
@@ -17,7 +17,7 @@
                 <item name="class" xsi:type="string">primary </item>
                  <item name="url" xsi:type="string">sso/sso/add</item>
             </item>
-         </item> 
+         </item>
     </argument>
     <dataSource name="sso_sso_listings_data_source">
         <!--The data source-->
@@ -131,7 +131,7 @@
                         </item>
                     </item>
                 </argument>
-            </action>    
+            </action>
             <action name="change_status">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
@@ -204,21 +204,21 @@
                     <item name="label" xsi:type="string" translate="true">Name</item>
                 </item>
             </argument>
-        </column>        
-        <column name="email">
+        </column>
+        <!-- <column name="email">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                     <item name="filter" xsi:type="string">text</item> 
+                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Email</item>
                 </item>
             </argument>
-        </column>
+        </column> -->
         <column name="url">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                     <item name="sorting" xsi:type="string">asc</item> 
+                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Url</item>
                 </item>
             </argument>
