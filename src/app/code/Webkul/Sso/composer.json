@@ -8,7 +8,7 @@
         "magento/module-store": "100.2.*",
         "magento/module-contact": "100.2.*",
         "magento/framework": "101.0.*",
-		    "firebase/php-jwt":"~5.0"
+        "firebase/php-jwt":"~5.0"
     },
     "type": "magento2-module",
     "version": "2.0.1",
@@ -17,10 +17,10 @@
     ],
     "autoload": {
         "files": [
-            "src/app/code/Webkul/Sso/registration.php"
+            "registration.php"
         ],
         "psr-4": {
-            "Webkul\\Sso\\": "src/app/code/Webkul/Sso"
+            "Webkul\\Sso\\": ""
         }
     }
 }

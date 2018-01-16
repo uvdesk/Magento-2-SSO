@@ -1,0 +1,89 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Sso
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<?php
+$isAuthorized = $block->isAuthorized();
+$isLoggedIn = $block->isLoggedIn();
+$isClientName = $block->getClientName();
+$customerDetails = $block->getLoggedInUserDetail();
+?>
+<?php if ($isAuthorized && !$isLoggedIn) { ?>
+<?php //if (!$isLoggedIn) { ?>
+<main id="maincontent" class="page-main __web-inspector-hide-shortcut__"><a id="contentarea" tabindex="-1"></a>
+    <div class="login-container">
+        <div class="block block-customer-login" style="margin:0 auto; float:none; margin-top:8%;">
+            <div class="block-title">
+                    <strong id="block-customer-login-heading" role="heading" aria-level="2">Sign In to continue to <?php echo $isClientName; ?></strong>
+            </div>
+            <div class="block-content" aria-labelledby="block-customer-login-heading">
+                <form class="form form-login" action="<?php $block->getUrl('sso/sso/index');?>" method="post" id="login-form" novalidate="novalidate">
+                    <input name="form_key" type="hidden" value="HyJIVzEi7lWsP0XO">            <fieldset class="fieldset login" data-hasrequired="* Required Fields">
+                        <div class="field note">If you have an account, sign in with your email address.</div>
+                        <div class="field email required">
+                            <label class="label" for="email"><span>Email</span></label>
+                            <div class="control">
+                                <input name="login[username]" value="" autocomplete="off" id="email" type="email" class="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="field password required">
+                            <label for="pass" class="label"><span>Password</span></label>
+                            <div class="control">
+                                <input name="login[password]" type="password" autocomplete="off" class="input-text" id="pass" title="Password" data-validate="{required:true}" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="actions-toolbar">
+                            <div class="primary"><button type="submit" class="action login primary" name="send" id="send2"><span>Sign In</span></button></div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<?php } ?>
+<?php if ($isLoggedIn && $isAuthorized) { ?>
+<form action="" method="post" id="login-form">
+    <div class="sso-main-container">
+        <div class="sso-message-div">
+            <label class="sso-message"><?php echo $isClientName; echo __(' will receive your public profile') ?></label></div>
+        <div class="sso-authorize-div">
+            <button id="authorization" name="authorization" value="true" class="sso-authorize-button"><?php echo __('Continue as '); ?> <?php echo $customerDetails['name'] ; ?> </button>
+        </div>
+        <div class="sso-cancel-div">
+            <button id="cancel" name="cancel" value="true" class="sso-cancel-button">Cancel</button>
+        </div>
+    </div>
+</form>
+<?php } ?>
+<!--<script type="text/javascript">
+require(
+[
+    'jquery',
+    'mage/template',
+    'Magento_Ui/js/modal/alert'
+],function($, template,alert){
+    $(document).ready(function() {
+        $('#login-form').submit(function(event) {
+            $('#authorizationn').attr('disabled','true');
+            // $('#authorization').attr('value','true');
+            $('#cancell').attr('disabled','true');
+            // $('#cancel').attr('value','true');
+            return;
+        });
+        $('$authorizationn').on('click',function(){
+            $('#authorization').attr('value','true');
+        });
+        $('$cancell').on('click',function(){
+            $('#cancel').attr('value','true');
+        });
+    });
+});
+</script>-->

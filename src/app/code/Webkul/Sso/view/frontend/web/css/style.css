@@ -1,0 +1,30 @@
+.sso-main-container{
+    text-align: center;
+    padding:13px;
+    margin:auto;
+    margin-top: 8%;
+    width:35%;
+    background-color: gainsboro;
+    height: 234px;
+    z-index: 29;
+}
+.sso-message-div{
+    padding: 19px;
+    margin: 10px 0;
+}
+.sso-message{
+    font-weight:600;
+    font-size:21px;
+}
+.sso-authorize-div{
+margin: 10px 0;
+}
+.sso-authorize-button{
+    background-color: #1979c3;
+    color: white;
+}
+.sso-cancel-div{
+margin: 30px 0;
+}
+.sso-cancel-button{
+}
